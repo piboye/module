@@ -3,8 +3,6 @@ package module
 import (
 	"errors"
 	"log"
-
-	"github.com/piboye/flag"
 )
 
 func init() {
@@ -162,8 +160,6 @@ func (self *ModuleMgr) Get(name string) *Module {
 
 func InitAllModule() error {
 	var err error
-	flag.Parse()
-	flag.Parse()
 	mgr := GetModuleMgr()
 	err = mgr.Init()
 	if err != nil {
